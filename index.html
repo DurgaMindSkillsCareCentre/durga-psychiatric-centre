@@ -199,7 +199,50 @@
     </script>
 </head>
 <body class="min-h-screen antialiased selection:bg-teal-500 selection:text-white">
+* ════════════════════════════════
+       1. TOP SOCIAL IMPACT SCROLL TICKER
+       ════════════════════════════════ */
+    .ticker-container {
+      background: rgba(255, 214, 106, 0.06);
+      border-bottom: 1px solid rgba(255, 214, 106, 0.15);
+      overflow: hidden;
+      padding: 12px 0;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      -webkit-mask-image: linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%);
+      mask-image: linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%);
+    }
 
+    .ticker-track {
+      display: flex;
+      width: max-content;
+      animation: tickerMarquee 25s linear infinite;
+    }
+
+    .ticker-item {
+      padding: 0 28px;
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: var(--gold-primary);
+      white-space: nowrap;
+      letter-spacing: 0.05em;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      border-right: 1px solid rgba(255, 214, 106, 0.20);
+    }
+
+    @keyframes tickerMarquee {
+      0% { transform: translate3d(0, 0, 0); }
+      100% { transform: translate3d(-50%, 0, 0); }
+    }
+
+    /* Pause ticker on hover for usability */
+    .ticker-container:hover .ticker-track { animation-play-state: paused; }
+    
     <div class="bg-slate-950/95 text-teal-400 text-[10px] md:text-xs py-3 px-4 text-center tracking-[0.2em] font-black border-b border-white/5 relative z-50 uppercase shadow-2xl">
         ⚡ EVIDENCE-BASED CLINICAL PSYCHOLOGY &bull; MULTIDISCIPLINARY HEALTHCARE OPERATIONS &bull; CORPORATE TRAINING ACADEMIES &bull; BEHAVIORAL CONSULTATION HUBS
     </div>
