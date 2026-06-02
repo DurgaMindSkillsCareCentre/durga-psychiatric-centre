@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="google-site-verification" content="5h0MsUFTrYp2YzESzgibiYr5sR3PgKmSbeDPZ3mvFP4" />
+  <meta name="theme-color" content="#ffd66a">
+  <meta name="color-scheme" content="dark">
+  <title>Durga Psychiatric Centre | Digital Ecosystem & Link Hub</title>
+  <meta name="description" content="Official central directory node for Durga Psychiatric Centre, SoftSkills Academy, and AI Mental Health Test Tools in T. Nagar, Chennai.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://durga-mindskillscare.pages.dev">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    /* ═══════════════════════════════════════════════════════
+       LUXURY DESIGN SYSTEM VARIABLES (DARK GOLD LUXE)
+       ═══════════════════════════════════════════════════════ */
+    :root {
+      --bg-main: #060b16;
+      --bg-card: linear-gradient(145deg, #101a33, #0a1326);
+      --bg-subcard: rgba(255, 255, 255, 0.03);
+      --gold-primary: #ffd66a;
+      --gold-fade: #f4dd9d;
+      --accent-gradient: linear-gradient(135deg, #ffd66a, #ffb85c);
+      
+      --text-main: rgba(255, 255, 255, 0.92);
+      --text-muted: rgba(255, 255, 255, 0.60);
+      --border-glow: rgba(255, 255, 255, 0.08);
+      --border-hover: rgba(255, 214, 106, 0.3);
+      
+      --radius-lg: 28px;
+      --radius-md: 16px;
+      --radius-pill: 999px;
+      --max-width: 1100px;
+      --shadow-premium: 0 20px 50px rgba(0, 0, 0, 0.55);
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--bg-main);
+      color: var(--text-main);
+      overflow-x: hidden;
+      padding-bottom: 60px;
+    }
+    a { color: inherit; text-decoration: none; }
+    img { display: block; max-width: 100%; }
+
+    .container {
+      width: min(calc(100% - 32px), var(--max-width));
+      margin-inline: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 36px;
+    }
+
+    /* ════════════════════════════════
+       1. TOP SOCIAL IMPACT SCROLL TICKER
+       ════════════════════════════════ */
+    .ticker-container {
+      background: rgba(255, 214, 106, 0.06);
+      border-bottom: 1px solid rgba(255, 214, 106, 0.15);
+      overflow: hidden;
+      padding: 12px 0;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      -webkit-mask-image: linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%);
+      mask-image: linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%);
+    }
+
+    .ticker-track {
+      display: flex;
+      width: max-content;
+      animation: tickerMarquee 25s linear infinite;
+    }
+
+    .ticker-item {
+      padding: 0 28px;
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: var(--gold-primary);
+      white-space: nowrap;
+      letter-spacing: 0.05em;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      border-right: 1px solid rgba(255, 214, 106, 0.20);
+    }
+
+    @keyframes tickerMarquee {
+      0% { transform: translate3d(0, 0, 0); }
+      100% { transform: translate3d(-50%, 0, 0); }
+    }
+
+    /* Pause ticker on hover for usability */
+    .ticker-container:hover .ticker-track { animation-play-state: paused; }
+
+    /* ════════════════════════════════
+       HEADER / HERO BRAND AREA
+       ════════════════════════════════ */
+    .profile-card {
+      text-align: center;
+      padding-top: 40px;
+    }
+
+    .avatar-wrap {
+      position: relative;
+      width: 130px;
+      height: 130px;
+      margin: 0 auto 20px;
+    }
+
+    .avatar-wrap img {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid var(--gold-primary);
+      box-shadow: 0 10px 30px rgba(255, 214, 106, 0.2);
+    }
+
+    h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.2rem;
+      color: var(--gold-primary);
+      margin-bottom: 6px;
+    }
+
+    .tagline {
+      font-size: 0.95rem;
+      color: var(--text-muted);
+      max-width: 650px;
+      margin: 0 auto;
+      line-height: 1.6;
+    }
+
+    /* ════════════════════════════════
+       PANEL & LAYOUT ARCHITECTURE
+       ════════════════════════════════ */
+    .premium-panel {
+      background: var(--bg-card);
+      border: 1px solid var(--border-glow);
+      border-radius: var(--radius-lg);
+      padding: 36px;
+      box-shadow: var(--shadow-premium);
+    }
+
+    .panel-header {
+      margin-bottom: 24px;
+    }
+
+    .panel-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.5rem;
+      color: var(--gold-fade);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .panel-subtitle {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      margin-top: 4px;
+    }
+
+    /* ════════════════════════════════
+       2. BOTTOM CROSS LINKS DIRECTORY GRID
+       ════════════════════════════════ */
+    .grid-layout {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 16px;
+    }
+
+    .eco-link-card {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      padding: 18px 20px;
+      background: var(--bg-subcard);
+      border: 1px solid var(--border-glow);
+      border-radius: var(--radius-md);
+      font-weight: 600;
+      font-size: 0.9rem;
+      color: #eef2ff;
+      transition: all 0.28s cubic-bezier(0.25, 0.8, 0.25, 1);
+    }
+
+    .eco-link-card .icon-box {
+      font-size: 1.4rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      height: 40px;
+      border-radius: 10px;
+      background: rgba(255, 255, 255, 0.05);
+    }
+
+    .eco-link-card .link-details {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .eco-link-card .link-details span {
+      font-size: 0.72rem;
+      color: var(--text-muted);
+      font-weight: 400;
+      margin-top: 2px;
+    }
+
+    /* Premium Anchor Feature Element */
+    .eco-link-card.anchor-master {
+      background: var(--accent-gradient);
+      color: #060b16;
+      border: none;
+      grid-column: 1 / -1;
+      justify-content: center;
+      font-size: 1.05rem;
+      padding: 20px;
+      font-weight: 700;
+      box-shadow: 0 10px 25px rgba(255, 184, 92, 0.2);
+    }
+
+    .eco-link-card.anchor-master .icon-box {
+      background: rgba(0, 0, 0, 0.1);
+    }
+
+    /* Hover Systems (Desktop Engine Accelerated) */
+    @media (hover: hover) {
+      .eco-link-card:hover {
+        background: rgba(255, 255, 255, 0.07);
+        border-color: var(--border-hover);
+        transform: translateY(-2px);
+      }
+      .eco-link-card.anchor-master:hover {
+        filter: brightness(1.08);
+        box-shadow: 0 14px 32px rgba(255, 184, 92, 0.35);
+      }
+      .cta-btn:hover {
+        background-color: #1e293b;
+        transform: translateY(-2px);
+      }
+    }
+
+    /* ════════════════════════════════
+       HIGH CONVERSION FOOTER ACTION
+       ════════════════════════════════ */
+    .action-footer {
+      background: var(--accent-gradient);
+      color: #0d1321;
+      border-radius: var(--radius-lg);
+      padding: 40px 24px;
+      text-align: center;
+      box-shadow: 0 20px 50px rgba(255, 184, 92, 0.15);
+      margin-top: 10px;
+    }
+
+    .action-footer h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.8rem;
+      margin-bottom: 8px;
+    }
+
+    .action-footer p {
+      font-size: 0.9rem;
+      font-weight: 500;
+      color: #1e293b;
+      margin-bottom: 24px;
+    }
+
+    .cta-group {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 12px;
+    }
+
+    .cta-btn {
+      padding: 14px 28px;
+      border-radius: var(--radius-pill);
+      background-color: #0f172a;
+      color: #ffffff;
+      font-weight: 700;
+      font-size: 0.88rem;
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.2);
+      transition: all 0.3s ease;
+    }
+
+    /* Responsive Breaks */
+    @media (max-width: 768px) {
+      body { padding-bottom: 40px; }
+      .premium-panel { padding: 24px 18px; }
+      h1 { font-size: 1.8rem; }
+      .action-footer h2 { font-size: 1.5rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 1. TOP SOCIAL IMPACT SCROLL TICKER -->
+  <div class="ticker-container" aria-hidden="true">
+    <div class="ticker-track">
+      <div class="ticker-item">▶ 80K+ YouTube Subscribers</div>
+      <div class="ticker-item">📘 250K+ Facebook Followers</div>
+      <div class="ticker-item">📸 40K+ Instagram Followers</div>
+      <div class="ticker-item">⭐ 1000+ Patients Served</div>
+      <div class="ticker-item">📍 T Nagar, Chennai</div>
+      <div class="ticker-item">🎓 MSW Medical & Psychiatry</div>
+      <div class="ticker-item">🔒 100% Secure & Confidential</div>
+      <div class="ticker-item">🤖 India's First AI Mental Health Test Interface</div>
+      <!-- Duplicate set for seamless continuous marquee loops -->
+      <div class="ticker-item">▶ 80K+ YouTube Subscribers</div>
+      <div class="ticker-item">📘 250K+ Facebook Followers</div>
+      <div class="ticker-item">📸 40K+ Instagram Followers</div>
+      <div class="ticker-item">⭐ 1000+ Patients Served</div>
+      <div class="ticker-item">📍 T Nagar, Chennai</div>
+      <div class="ticker-item">🎓 MSW Medical & Psychiatry</div>
+      <div class="ticker-item">🔒 100% Secure & Confidential</div>
+      <div class="ticker-item">🤖 India's First AI Mental Health Test Interface</div>
+    </div>
+  </div>
+
+  <div class="container">
+
+    <!-- MASTER HERO HEADER -->
+    <header class="profile-card">
+      <div class="avatar-wrap">
+        <img src="durga.jpg" alt="D. Durga — Best Psychologist in Chennai">
+      </div>
+      <h1>D. Durga</h1>
+      <p class="tagline">Clinical Well-being Specialist, Corporate SoftSkills Trainer, and Architect of Chennai's Pioneer AI Mental Health Assessment Interfaces.</p>
+    </header>
+
+    <!-- CONTENT ELEMENT HUB (SAMPLE CONSOLE) -->
+    <section class="premium-panel" aria-label="Overview Matrix">
+      <div class="panel-header">
+        <h2 class="panel-title">🤖 Unified System Gateways</h2>
+        <p class="panel-subtitle">Access real-time dynamic applications configured for immediate diagnostic screening.</p>
+      </div>
+      <div class="grid-layout">
+        <a href="https://durga-mindskillscare.pages.dev/ai-test.html" target="_blank" class="eco-link-card">
+          <div class="icon-box">🧠</div>
+          <div class="link-details">
+            <strong>Free AI Mental Health Test</strong>
+            <span>24/7 Screening Interface</span>
+          </div>
+        </a>
+        <a href="https://durgamindskillscarecentre.github.io/durga-softskills-academy/" target="_blank" class="eco-link-card">
+          <div class="icon-box">🎓</div>
+          <div class="link-details">
+            <strong>SoftSkills Academy Node</strong>
+            <span>Training & Leadership Programs</span>
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <!-- 2. BOTTOM CROSS-PLATFORM LINK DIRECTORY GRID -->
+    <section class="premium-panel" aria-label="Ecosystem Cross-Links">
+      <div class="panel-header">
+        <h2 class="panel-title">🌐 Cross-Platform Digital Ecosystem Matrix</h2>
+        <p class="panel-subtitle">Verified alternative directory endpoints, content publications, and verified search-crawled local registries.</p>
+      </div>
+      
+      <div class="grid-layout">
+        <!-- Master Node Juice Distributor -->
+        <a href="https://durga-mindskillscare.pages.dev" target="_blank" class="eco-link-card anchor-master">
+          <div class="icon-box">🌐</div>
+          <span>Access Main Durga Psychiatric Centre Core Portal</span>
+        </a>
+
+        <!-- GitHub Pages Ecosystem -->
+        <a href="https://durgamindskillscare.github.io" target="_blank" class="eco-link-card">
+          <div class="icon-box">🐙</div>
+          <div class="link-details">
+            <strong>GitHub Pages Repository</strong>
+            <span>durgamindskillscare.github.io</span>
+          </div>
+        </a>
+
+        <!-- Google Sites Node -->
+        <a href="https://sites.google.com/view/durgapsychiatriccentre/" target="_blank" class="eco-link-card">
+          <div class="icon-box">🔍</div>
+          <div class="link-details">
+            <strong>Google Sites Hub</strong>
+            <span>Verified Medical Node</span>
+          </div>
+        </a>
+
+        <!-- WordPress Network -->
+        <a href="https://durgapsychiatriccentrechennai.wordpress.com/" target="_blank" class="eco-link-card">
+          <div class="icon-box">📝</div>
+          <div class="link-details">
+            <strong>WordPress Counsel Hub</strong>
+            <span>Publications & Articles</span>
+          </div>
+        </a>
+
+        <!-- Blogger Platform -->
+        <a href="https://durgapsychiatric.blogspot.com/" target="_blank" class="eco-link-card">
+          <div class="icon-box">✍️</div>
+          <div class="link-details">
+            <strong>Blogger Platform</strong>
+            <span>Clinical Knowledge-Base</span>
+          </div>
+        </a>
+
+        <!-- Google Local Business Map Profile -->
+        <a href="https://share.google/6mUOm89ctXvWWVvSL" target="_blank" class="eco-link-card">
+          <div class="icon-box">⭐</div>
+          <div class="link-details">
+            <strong>Google Business Profile</strong>
+            <span>Maps, Reviews & Directions</span>
+          </div>
+        </a>
+
+        <!-- JustDial Directory -->
+        <a href="https://jsdl.in/DT-201CCF7Y899" target="_blank" class="eco-link-card">
+          <div class="icon-box">📍</div>
+          <div class="link-details">
+            <strong>JustDial Registry Node</strong>
+            <span>Local T. Nagar Listing</span>
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <!-- LIVE HIGH-CONVERSION BOOKING ACTION CONSOLE -->
+    <footer class="action-footer" aria-label="Direct Connections">
+      <h2>Initiate Your Consultation</h2>
+      <p>Connect instantly via secure live paths to arrange clinics in Chennai or coordinate worldwide virtual soft skills courses.</p>
+      <div class="cta-group">
+        <a href="https://wa.me/917395944527" target="_blank" class="cta-btn">💬 Instant WhatsApp Appointment</a>
+        <a href="tel:+917395944527" class="cta-btn">📞 Clinical Voice Hotline</a>
+      </div>
+    </footer>
+
+  </div>
+
+</body>
+</html>
